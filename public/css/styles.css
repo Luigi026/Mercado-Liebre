@@ -169,7 +169,6 @@ p.footer__div__p--copyright {
         border-radius: 2px;
         padding-left:10px ;
     }
-    
     .button--lupa {
         padding: 2px 25px 7px;
         background-color: #ffffff;
@@ -207,7 +206,7 @@ p.footer__div__p--copyright {
     li {
         display: flex;
         justify-content: space-around;
-        padding: 3px;
+        padding: 3px 0 4px;
         border-bottom: 1px solid yellow; 
     }
     a {
@@ -228,7 +227,12 @@ p.footer__div__p--copyright {
         margin-top: 18px;
         font-size: 30px;
     }
+    .main__section__div--p i {
+        font-size: 23px;
+        padding: 8px;
+    }
 }
 @media(min-width:769px){
 
+    
 }
