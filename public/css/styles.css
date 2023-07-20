@@ -1,9 +1,12 @@
 
 /*    -----    HEADER    -----     */
- * {
+
+* {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
+    padding: 0;
+    box-sizing: border-box;
 }
 body {
     background-color: #ebebeb;
@@ -28,7 +31,7 @@ header {
     margin-bottom: 2px;
 }
 .button--lupa {
-    padding: 0px;   
+    padding-top: 2px;
 }
 .header__nav__div1 {
     display: none;
@@ -60,7 +63,7 @@ a {
     color: #000000;
 }
 li {
-    list-style: none;  
+    list-style: none; 
 }
 ul {
     padding:0px;
@@ -107,6 +110,10 @@ ul {
 }
 .main__section__article__p--descripciones{
     font-size: 16px;
+    display: none;
+}
+.main__section article {
+    box-shadow: 0 0 10px #666;
 }
 
 
@@ -144,16 +151,18 @@ p.footer__div__p--copyright {
     padding: 0 21px;
 }
 
-@media(min-width:481px) {
+@media(min-width:361px) {
 
     /* H E A D E R */
-
+    .main__section article {
+        margin-bottom: 10px;
+    }
     .header__nav1--logo {
         width: 100%;
         padding: 10px 0px 5px;
     }
     .header__nav__p {
-        font-size: 18px;
+        font-size: 12px;
         margin-bottom: 34px;
     }
     .header__nav1 {
@@ -170,7 +179,7 @@ p.footer__div__p--copyright {
         padding-left:10px ;
     }
     .button--lupa {
-        padding: 2px 25px 7px;
+        padding: 7px 25px;
         background-color: #ffffff;
         border: 1px solid grey;
         border-radius: 2px;
@@ -178,27 +187,70 @@ p.footer__div__p--copyright {
         text-transform: uppercase;  
     }
     .burger-menu {
-        display: none;
+        display: none;  
     }
     .header__nav2 {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
     }
+    .main__section {
+        flex-direction: row;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .main__section__article__p--precios {
+        font-size: 12px;
+        display: flex;
+        width: 50%;
+    }
+    .main__section__article__p--descuentos {
+        font-size: 10px;
+        display: flex;
+        width: 50%;
+        color: #39b54a;
+        padding-left: 7px ;
+        align-items: center;
+    }
+        
+    .main__section__article__p--descripciones{
+        font-size: 9px;
+        display: flex;
+        color: #666;
+        padding-top: 12px;
+    }
     .header__nav__div1 {
         background-color: #03264c;
         display: flex;
-        justify-content: space-around;
-        width: 52%;
-        padding: 2px;
+        justify-content: center;
+        width: 50%;
+        padding: 9px;
+    } 
+    .main__section__div--p {
+        padding: 0 10px 8px;
+    }
+    .main__section__div--p i {
+        font-size: 8px;
+        padding: 3px;
+        display: block;
+        width: 13%;
+        border: 1px solid #39b54a;
+        background-color: #fff;
+        border-radius: 50%;
+        position: relative;
+        left: 89%;
+        top: -8px;
+    }
+    .home__section__div--pre-des {
+        display: flex;
+        flex-wrap: wrap;
     }
     .header__nav__div2 {
         background-color: #03264c;
         display: flex;
         justify-content: space-around;
-        width: 48%;
-        padding: 16px;
-        
+        width: 50%;
     }
     .header__nav__div2 ul {
         width: 40%;
@@ -212,27 +264,79 @@ p.footer__div__p--copyright {
     a {
         color: #ffffff;
         text-align: center;
-        font-size: 17px;
-        margin:10px ;
+        font-size: 10px;
         display:flex;
         justify-content: space-around;
-        padding: 10px 15px;
-        border-radius: 5px;
     }
     a:hover {
         text-decoration: underline;
         text-decoration-color: yellow;
     }
     i {
-        margin-top: 18px;
-        font-size: 30px;
+        font-size: 15px;
+        margin: 2px 0;
     }
-    .main__section__div--p i {
-        font-size: 23px;
-        padding: 8px;
+    .main__section__p--titulares  {
+        width: 90%;
+    }
+    .main__section article {
+        width: 48%;
     }
 }
 @media(min-width:769px){
 
-    
+    .main__section article {
+        width: 24%;
+        margin-bottom: 10px;
+    }
+    .home__section__div--pre-des {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .main__section__article__p--precios {
+        display: flex;
+        width: 30%;
+        font-size: 20px;
+    }
+    .main__section__article__p--descuentos {
+        display: flex;
+        width: 70%;
+        align-items: center;
+        font-size: 15px;
+        color: #39b54a;
+        padding-left: 7px ;
+        
+    }
+    .main__section__div--p i {
+        font-size: 14px;
+        padding: 4px; 
+        width: 18%;
+        left: 75%;
+        top: -6px;
+    }
+    .main__section__div--p {
+        padding: 0 15px 12px;
+    }
+    .main__section__article__p--descripciones{
+        padding-top: 15px;
+        color: #666;
+        font-size: 18px;
+    }
+    .main__section__article__p--descripciones{
+        font-size: 13px;
+    }
+    .main__section__article__p--precios {
+        font-size: 14px;
+        width: 40%;
+    }
+    .main__section__article__p--descuentos {
+        font-size: 12px;
+        width: 60%;
+        padding-left: 7px ;
+        align-items: center;
+    }
+    .main__section--truck {
+        margin: -8px;
+    }
+
 }
