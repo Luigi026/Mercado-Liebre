@@ -192,11 +192,13 @@ p.footer__div__p--copyright {
     .header__nav1--logo {
         width: 28%;
     }
-    .button--lupa { 
+    .button--lupa {
         left: 2%;
         top: 0px;
-        padding: 0;
-        margin: 10px 1px;
+        padding: 4px;
+        margin: 13px 1px;
+        left: -3%;
+        top: 0px;
     }
     .header__nav1 {
         display: flex;
@@ -293,8 +295,9 @@ p.footer__div__p--copyright {
         justify-content: space-around;
     }
     a:hover {
+        padding: 1px;
         text-decoration: underline;
-        text-decoration-color: yellow;
+        text-decoration-color: #1259c3;
     }
     i {
         font-size: 10px;
@@ -309,6 +312,9 @@ p.footer__div__p--copyright {
     h1 {
         font-size: 19px;
         margin-left: 48px;
+    }
+    .header__nav__p {
+        font-size: 14px;
     }
 
     .main__section article {
@@ -362,6 +368,15 @@ p.footer__div__p--copyright {
     }
     .main__section--truck {
         margin: -8px;
+    }
+    i {
+        font-size: 14px;
+    }
+    a {
+        font-size:12px;
+    }
+    .header__nav1--input {
+        font-size: 12px;
     }
 
 }
