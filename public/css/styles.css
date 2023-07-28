@@ -102,6 +102,8 @@ ul {
 .main__section {
     width: 90%;
     flex-direction: column;
+    align-items: flex-start;
+
 }
 .main__section article {
     margin: 10px;
@@ -129,9 +131,9 @@ ul {
 }
 .main__section__article__p--descripciones{
     font-size: 16px;
-    display: none;
+
 }
-.main__section article {
+.main__section article:hover {
     box-shadow: 0 0 10px #666;
 }
 
@@ -153,6 +155,7 @@ footer.footer {
     width: 90%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 .footer__section__article {
     margin: 50px 0 0px;   
@@ -244,6 +247,9 @@ p.footer__div__p--copyright {
         color: #666;
         padding-top: 12px;
     }
+    .main__section article:hover {
+        box-shadow: 0 0 10px #666;
+    }
     .header__nav__div1 {
         display: flex;
         justify-content: center;
@@ -307,7 +313,7 @@ p.footer__div__p--copyright {
         margin-left: 35px;
     }
 }
-@media(min-width:769px){
+@media(min-width:769px) {
 
     h1 {
         font-size: 19px;
@@ -351,11 +357,18 @@ p.footer__div__p--copyright {
     .main__section__article__p--descripciones{
         padding-top: 15px;
         color: #666;
-        font-size: 18px;
-    }
-    .main__section__article__p--descripciones{
         font-size: 13px;
+        height: 0;
+        overflow: hidden;
+        transition: all 1s ease;
     }
+    .main__article:hover .main__section__article__p--descripciones {
+        height: 40px;
+    }
+    .main__section article:hover {
+        box-shadow: 0 0 10px #666;
+    }
+   
     .main__section__article__p--precios {
         font-size: 14px;
         width: 40%;
@@ -378,5 +391,22 @@ p.footer__div__p--copyright {
     .header__nav1--input {
         font-size: 12px;
     }
+    .footer__section {
+        flex-direction: row;
+    }
+    .footer__section__article {
+        margin: 50px 0 0px;   
+        width: 30%;
+    }
+    footer .fa-solid  {
+        font-size: 2em;
+        margin-bottom: 10px;
+        color: #1259c3;
+    }
+    footer .fa-solid:hover {
+        color:#000
+    }
+   
+   
 
 }
