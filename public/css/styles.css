@@ -23,8 +23,8 @@ header {
 }
 .header__nav1--logo {
     width: 50%;
-    display: flex; 
-    margin-left: -5px; 
+    display: flex;
+    margin-left: -5px;
 }
 .header__nav1 {
     width: 100%;
@@ -194,7 +194,7 @@ p.footer__div__p--copyright {
         width: 45%;
     }
     .header__nav1--logo {
-        width: 28%;
+        width: 30%;
     }
     .button--lupa {
         left: 2%;
