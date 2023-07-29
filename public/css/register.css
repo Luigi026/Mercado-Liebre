@@ -1,0 +1,98 @@
+.register {
+    background-color: #03264c;
+}
+.container {
+    padding: 10px;
+}
+.header__nav__p {
+    display: none;
+}
+.header__nav1--input {
+    display: none;
+}
+.burger-menu {
+    display: none;
+}
+.button--lupa {
+    display: none;
+}
+.header__nav1--logo {
+    width: 100%;
+}
+
+.header__nav__div2  {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+}
+.header__nav__div2 ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.card-title {
+    text-align: center;
+}
+.form__control {
+    border: 1px solid silver;
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: 100%;
+}
+.form__control:focus {
+    outline: none;
+    border: 4px solid #c2dbfe;
+    box-shadow: 0px 0px 10px #c2dbfe;
+}
+.buttons {
+    border: none;
+    border-radius: 5px;
+    padding: 6px 10px ;
+}
+.buttons__primary {
+    color: #ffffff;
+    background-color: #2b79f7;
+}
+.buttons__primary:hover {
+    background-color: #1558c4;
+}
+.buttons__secondary {
+    color: #ffffff;
+    background-color: rgb(137, 134, 134);
+}
+.buttons__secondary:hover {
+    background-color: #615f5f;
+}
+.botones {
+    display: flex;
+    justify-content: space-evenly;
+}
+@media(min-width:481px) {
+
+    .header__nav2 {
+        width: 100%;
+        padding: 0;
+    }
+    .header__nav__div1 {
+        display: none;
+    }
+    .header__nav__div2 ul a {
+        font-size: 15px;
+    }
+    .card {
+    margin: 20px;
+    display: flex;
+    }
+    .header__nav1--logo img  {
+        font-size: 50px;
+    }
+}
+@media(min-width:769px) {
+
+    .container {
+        width: 60%;
+    }
+    .header__nav__div2 ul a {
+        font-size: 20px;
+    }
+}
