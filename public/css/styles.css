@@ -41,7 +41,7 @@ header {
 .button--lupa { 
     display: block;
     position: relative;
-    left: 89%;
+    left: 46%;
     top: -34px;
     background-color: #ffffff;
     border: none;
@@ -123,7 +123,22 @@ ul {
     padding: 5px 4px 4px 5px;
     border: 1px solid #39b54a;
     border-radius: 50%;
+} 
+.main__section__div--p i:hover {
+    animation: rotate 1s linear;
 }
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(-90deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}   
+
 .main__section__article__p--precios {
     font-size: 18px;
 }
@@ -131,8 +146,7 @@ ul {
     font-size: 16px;
 }
 .main__section__article__p--descripciones{
-    font-size: 16px;
-
+    display: none;
 }
 .main__section article:hover {
     box-shadow: 0 0 10px #666;
@@ -173,6 +187,12 @@ p.footer__div__p--copyright {
 .footer__article--p {
     padding: 0 21px;
 }
+@media(min-width: 337px) {
+
+    .button--lupa {    
+        left: 87%;
+    }
+}
 
 @media(min-width:481px) {
 
@@ -196,6 +216,7 @@ p.footer__div__p--copyright {
     .header__nav1--logo {
         width: 30%;
     }
+
     .button--lupa {
         left: 2%;
         top: 0px;
@@ -353,7 +374,7 @@ p.footer__div__p--copyright {
         top: -6px;
     }
     .main__section__div--p {
-        padding: 0 15px 12px;
+        padding: 0 10px;
     }
     .main__section__article__p--descripciones{
         padding-top: 15px;
@@ -377,8 +398,9 @@ p.footer__div__p--copyright {
     .main__section__article__p--descuentos {
         font-size: 12px;
         width: 60%;
-        padding-left: 7px ;
+        padding-left: 15px;
         align-items: center;
+        /* text-align: start; */
     }
     .main__section--truck {
         margin: -8px;
