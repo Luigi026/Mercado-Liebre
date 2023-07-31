@@ -51,26 +51,34 @@ header {
     margin:12px
 }
 .header__nav2 {
-    display: flex;
-    align-items: center;
-}   
-.header__nav__div1 {
+    height: 0;
+    overflow: hidden;
+}
+
+/* .header__nav__div1 {
     display: none;
 }
 .header__nav__div2 {
     display: none; 
+} */
+.showMenu {
+    height: auto;
 }
 .header__nav__p {
     text-align: center;
     padding-left: 22px;
 }
 .burger-menu {
+    width: 100%;
+    text-align: center;
+}
+.burger-menu button {
     margin:5px auto 16px;
     padding:8px;
     background-color: #03264c;
     border-radius: 5px;
     color: #ffff;    
-    display: inline-block;  
+    border: none; 
 }
 h1 {
     font-size: 16px;
@@ -125,7 +133,7 @@ ul {
     border-radius: 50%;
 } 
 .main__section__div--p i:hover {
-    animation: rotate 1s linear;
+    animation: rotate 1s;
 }
 @keyframes rotate {
     0% {
@@ -399,7 +407,6 @@ p.footer__div__p--copyright {
         width: 60%;
         padding-left: 15px;
         align-items: center;
-        /* text-align: start; */
     }
     .main__section--truck {
         margin: -8px;
@@ -412,7 +419,6 @@ p.footer__div__p--copyright {
     }
     .header__nav1--input {
         font-size: 12px;
-        /* width: 24%; */
     }
     .footer__section {
         flex-direction: row;
