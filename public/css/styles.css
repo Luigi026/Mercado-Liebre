@@ -54,13 +54,6 @@ header {
     height: 0;
     overflow: hidden;
 }
-
-/* .header__nav__div1 {
-    display: none;
-}
-.header__nav__div2 {
-    display: none; 
-} */
 .showMenu {
     height: auto;
 }
