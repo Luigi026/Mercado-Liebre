@@ -1,6 +1,10 @@
 module.exports = {
 
     index :  (req, res) => {
-        res.render('index');
-      }
+      return res.render('index');
+    },
+    admin :  (req, res) => {
+      return res.render('admin');
+    }  
+      
 }

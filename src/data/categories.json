@@ -1,0 +1,17 @@
+[
+    {
+        "id" : 1,
+        "name" : "Smart TV",
+        "image" : null
+    },
+    {
+        "id" : 2,
+        "name" : "Laptops",
+        "image" : null
+    },
+    {
+        "id" : 3,
+        "name" : "Telefonos",
+        "image" : null
+    }
+]
