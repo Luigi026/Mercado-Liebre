@@ -6,7 +6,7 @@ const router = express.Router();
 /*  /products */
 
 router
-    .get('/detail/:id?', detail)
+    .get('/detail/:id', detail)
     .get('/add', add)
     .post('/add', create)
 

@@ -9,6 +9,7 @@ const Product = function ({title, category, price, discount ,description, image}
     this.discount = +discount;
     this.description = description.trim();
     this.image = null
+    this.createaAt = new Date
 }
 
 module.exports = Product

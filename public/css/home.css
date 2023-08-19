@@ -323,7 +323,11 @@ p.footer__div__p--copyright {
         display:flex;
         justify-content: space-around;
     }
-    a:hover {
+    .header__nav__div1 a:hover {
+        text-decoration: underline;
+        text-decoration-color: #1259c3;
+    }
+    .header__nav__div2 a:hover {
         text-decoration: underline;
         text-decoration-color: #1259c3;
     }

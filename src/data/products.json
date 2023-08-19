@@ -1,11 +1,42 @@
 [
    {
-      "id": "1cadaa5b-5ea4-42d3-8f8d-eba45241384d",
+      "id": "d1eee741-a79e-4390-a2c8-2daf96fce147",
+      "title": "TV samsumg",
+      "category": "Smart TV",
+      "price": 100000,
+      "discount": 10,
+      "description": "TV 45' pulgadas",
+      "image": null,
+      "createaAt": "2023-08-19T19:41:00.273Z"
+   },
+   {
+      "id": "f63f88be-9be5-46a7-a4ff-af135bcd2adc",
       "title": "motorola",
       "category": "Telefonos",
       "price": 50000,
-      "discount": 10,
-      "description": "ultimo modelo",
-      "image": null
+      "discount": 5,
+      "description": "morotola one plus",
+      "image": null,
+      "createaAt": "2023-08-19T19:43:23.578Z"
+   },
+   {
+      "id": "25568bae-309c-4b26-99c7-c6be1dffe2f3",
+      "title": "mc",
+      "category": "Laptops",
+      "price": 200000,
+      "discount": 20,
+      "description": "pantalla lg 23pulgadas",
+      "image": null,
+      "createaAt": "2023-08-19T19:44:29.656Z"
+   },
+   {
+      "id": "190e3fd5-1d08-48c9-a36c-95402a46048e",
+      "title": "iphone",
+      "category": "Telefonos",
+      "price": 300000,
+      "discount": 30,
+      "description": "iphone one plus",
+      "image": null,
+      "createaAt": "2023-08-19T22:29:45.244Z"
    }
 ]
