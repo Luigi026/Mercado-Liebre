@@ -7,9 +7,9 @@ module.exports =  (req, res) => {//El body viaja todo lo que yo envio por post d
     
     const products = readJSON('products.json')// de esta forma me traigo los productos y leo el archivo.json
 
-    const newProduct = new Product(req.body);//instancia  
+    const newProduct = new Product(req.body);//creo una nueva instancia de producto
 //Todo lo que se manda por POST se recibe en el request con su propiedad body que es un objeto que se conforma de todas las propiedades que se crean apartir de los datos provenientes del formulario
-    products.push(newProduct); 
+    products.push(newProduct); //pusheo esa instancia
     //voy a pushear el nuevo producto que me genera la instancia del objeto producto y luego al ser puhseado me guarda un nuevo elemento en el array
 
     writeJSON(products, 'products.json')//(array, archivo.json), le paso el array que quiero que guarde en el archivo.json

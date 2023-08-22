@@ -2,7 +2,7 @@ const { readJSON, writeJSON } = require("../../data")
 
 module.exports = (req, res) => {
     
-    const { title, price, category, discount, description } = req.body;
+    const { title, price, category, discount, description, section } = req.body;
 
     const products = readJSON('products.json');
 
@@ -15,12 +15,13 @@ module.exports = (req, res) => {
 //igual al id que recibo por parametro entonces quiero que el
 //prodcuto.title sea igual al title trimeado y asi con todos sus ppropiedades
 
-        if(product.id ==req.params.id){
+        if(product.id === req.params.id){
             product.title = title.trim()
             product.description = description.trim()
             product.price = +price
             product.discount = +discount
             product.category = category
+            product.section = section
         }
         return product
     })

@@ -7,16 +7,18 @@
       "discount": 10,
       "description": "TV 45' pulgadas",
       "image": null,
+      "section": "new",
       "createaAt": "2023-08-19T19:41:00.273Z"
    },
    {
       "id": "f63f88be-9be5-46a7-a4ff-af135bcd2adc",
       "title": "motorola one plus",
       "category": "Telefonos",
-      "price": 50000,
-      "discount": 5,
+      "price": 30000,
+      "discount": 30,
       "description": "morotola one plus",
       "image": null,
+      "section": "sale",
       "createaAt": "2023-08-19T19:43:23.578Z"
    },
    {
@@ -27,6 +29,7 @@
       "discount": 20,
       "description": "pantalla lg 23pulgadas",
       "image": null,
+      "section": "free",
       "createaAt": "2023-08-19T19:44:29.656Z"
    },
    {
@@ -37,6 +40,29 @@
       "discount": 30,
       "description": "iphone one plus",
       "image": null,
+      "section": "sale",
       "createaAt": "2023-08-19T22:29:45.244Z"
+   },
+   {
+      "id": "f8300497-e110-4b0e-89eb-a8d16945c7aa",
+      "title": "nuevo iphone",
+      "category": "Telefonos",
+      "price": 100000,
+      "discount": 10,
+      "description": "nuevo modelo",
+      "image": null,
+      "section": "new",
+      "createaAt": "2023-08-20T23:44:25.254Z"
+   },
+   {
+      "id": "b71c782e-5ae7-44f7-9c65-9574304c94e9",
+      "title": "movile lg extra",
+      "category": "Telefonos",
+      "price": 10000,
+      "discount": 10,
+      "description": "52 pixeles",
+      "image": null,
+      "section": "new",
+      "createaAt": "2023-08-22T03:46:50.531Z"
    }
 ]

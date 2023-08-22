@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <%- include('partials/head') %>
-
     <body class="productAdd">
         <%- include('partials/header') %>
             <main class="container">
                 <div class="row">
                     <div class="col-12 col-lg-10 mx-auto mt-5">
                         <div class="card shadow">
-                            <!-- <div class="card-header">
-                                
+                            <!-- <div class="card-header">   
                             </div> -->
                             <div class="card-body">
                                 <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -33,148 +30,11 @@
                                 <div class="tab-content" id="myTabContent">
                                     <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel"
                                         aria-labelledby="home-tab" tabindex="0">
-                                        <div class="table-responsive">
-                                            <table class="table">
-                                                <thead>
-                                                    <tr>
-                                                        <th scope="col">N°</th>
-                                                        <th scope="col">Proudcto</th>
-                                                        <th scope="col">Categoria</th>
-                                                        <th scope="col">Precio</th>
-                                                        <th scope="col">descuento</th>
-                                                        <th scope="col">P.Final</th>
-                                                        <th scope="col">Acciones</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <% products.forEach(({id,title,category,price,discount, image, description},index)=> {
-                                                        %>
-                                                        <tr>
-                                                            <th scope="row">
-                                                                <%= index + 1 %>
-                                                            </th>
-                                                            <td>
-                                                                <%= title %>
-                                                            </td>
-                                                            <td>
-                                                                <%= category || 'Sin especificar' %>
-                                                            </td>
-                                                            <td>
-                                                                <%= price %>
-                                                            </td>
-                                                            <td>
-                                                                <%= discount %>
-                                                            </td>
-                                                            <td>
-                                                                <%= price -(price * discount / 100) %>
-                                                            </td>
-                                                            <td>
-                                                                <div class="d-flex gap-2">
-                                                                    <button type="button" class="btn btn-sm btn-primary"
-                                                                        data-bs-toggle="modal"
-                                                                        data-bs-target="#detailProduct<%= id %>"><i
-                                                                            class="fas fa-eye"></i>
-
-                                                                    </button>
-                                                                    <div class="modal fade" id="detailProduct<%= id %>"
-                                                                        tabindex="-1"
-                                                                        aria-labelledby="detailProduct<%= id %>Label"
-                                                                        aria-hidden="true">
-                                                                        <div class="modal-dialog modal-dialog-centered">
-                                                                            <div class="modal-content">
-                                                                                <div class="modal-header">
-                                                                                    <h5 class="modal-title fs-5"
-                                                                                        id="detailProduct<%= id %>Label"><%= title %></h5>
-                                                                                    <button type="button"
-                                                                                        class="btn-close"
-                                                                                        data-bs-dismiss="modal"
-                                                                                        aria-label="Close"></button>
-                                                                                </div>
-                                                                                <div class="modal-body">
-                                                                                    <div class="card mb-3" style="max-width: 540px;">
-                                                                                        <div class="row g-0">
-                                                                                            <div class="col-md-6">
-                                                                                            <img src="/images/<%= image || 'img-tv-samsung-smart.jpg' %>" class="img-fluid rounded-start" alt="...">
-                                                                                            </div>
-                                                                                            <div class="col-md-6">
-                                                                                            <div class="card-body">
-                                                                                                <h5 class="card-title"><%= title %></h5>
-                                                                                                <p class="card-text"><%= description %></p>
-                                                                                            </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        </div>                                                                                                          
-                                                                                </div>                                        
-                                                                                <div class="modal-footer">
-                                                                                    <button type="button"
-                                                                                        class="btn btn-secondary"
-                                                                                        data-bs-dismiss="modal">Cerrar</button>                           
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <a class="btn btn-sm btn-success"
-                                                                        href="/products/edit/<%= id %>"><i
-                                                                            class="fas fa-edit"></i></a>
-                                                                    <a class="btn btn-sm btn-danger"
-                                                                        href="/products/remove/<%= id %>"><i
-                                                                            class="fas fa-trash"></i></a>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                        <% }) %>
-                                                </tbody>
-                                                <tfoot>
-                                                </tfoot>
-                                            </table>
-                                            <div>
-                                                <a class="btn btn-outline-dark" href="/products/add">Nuevo producto</a>
-                                            </div>
-                                        </div>
+                                        <%- include('partials/tabletProducts', { products }) %>
                                     </div>
                                     <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel"
                                         aria-labelledby="profile-tab" tabindex="0">
-                                        <table class="table">
-                                            <thead>
-                                                <tr>
-                                                    <th scope="col">N°</th>
-                                                    <th scope="col">Nombre</th>
-                                                    <th scope="col">Cant. Prod.</th>
-                                                    <th scope="col">Imagen</th>
-                                                    <th scope="col">Acciones</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <% categories.forEach(({id, name, image},index)=> { %>
-                                                    <tr>
-                                                        <th scope="row">
-                                                            <%= index + 1 %>
-                                                        </th>
-                                                        <td>
-                                                            <%= name %>
-                                                        </td>
-                                                        <td>
-                                                            <%= products.filter(product=> product.category ===
-                                                                name).length %>
-                                                        </td>
-                                                        <td><img src="/img/categories/<%= image %>" class="img-fuid"
-                                                                alt=""></td>
-                                                        <td>
-                                                            <div class="d-flex gap-2">
-                                                                <a class="btn btn-sm btn-success"
-                                                                    href="/categories/edit/<%= id %>"><i
-                                                                        class="fas fa-edit"></i></a>
-                                                                <a class="btn btn-sm btn-danger"
-                                                                    href="/categories/remove/<%= id %>"><i
-                                                                        class="fas fa-trash"></i></a>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <% }) %>
-                                            </tbody>
-                                            <tfoot>
-                                            </tfoot>
-                                        </table>
+                                        <%- include('partials/tabletCategories', { categories }) %>
                                     </div>
                                     <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel"
                                         aria-labelledby="contact-tab" tabindex="0">

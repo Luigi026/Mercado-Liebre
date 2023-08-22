@@ -26,15 +26,24 @@
                                 <% }) %>
                             </select>
                         </div>
-                        <div class="col-12 col-md-6 mb-3">
+                        <div class="col-12 col-md-4 mb-3">
                             <label for="price" class="form-label">Precio</label>
                             <input type="number" class="form-control" name="price" id="price" value="<%= price %>"
                                 placeholder="Nombre del producto">
                         </div>
-                        <div class="col-12 col-md-6 mb-3">
+                        <div class="col-12 col-md-4 mb-3">
                             <label for="discount" class="form-label">Descuento</label>
                             <input type="number" class="form-control" name="discount" id="discount"
                                 placeholder="Nombre del producto" value="<%= discount %>">
+                        </div>
+                        <div class="col-12 col-md-4 mb-3">
+                            <label for="section" class="form-label">Seccion</label>
+                            <select class="form-select" id="section" name="section"
+                                aria-label="Default select example">
+                                <% sections.forEach(item => { %>
+                                 <option value="<%= item %>" <%= section  === item && 'selected' %>><%= item === 'free' ? 'Gratis' : item === 'sale' ? 'Oferta' : 'Nuevo' %></option>
+                                <% }) %>
+                            </select>
                         </div>
                         <div class="col-12 mb-3">
                             <label for="description" class="form-label">Descripcion</label>
