@@ -8,8 +8,8 @@ const Product = function ({title, category, price, discount ,description, sectio
     this.price = +price;
     this.discount = +discount;
     this.description = description.trim();
-    this.image = null
-    this.section = section
+    this.section = section;
+    this.image = image;
     this.createaAt = new Date
 }
 

@@ -15,49 +15,78 @@
                             </div>
                             <div class="card-body">
                                 <form action="" method="POST" class="row">
+
+                                                <!--    T I T  L E   -->
+
                                     <div class="col-12 col-md-6 mb-3">
-                                        <label for="name" class="form-label">Titulo </label>
-                                        <input type="text" class="form-control" name="title" id="name"
-                                            placeholder="Nombre del producto">
-                                    </div>
+                                        <label for="title" class="form-label">Titulo </label>                                           <!-- Si es que existe locals.old  y si en old del req.body existe title entonces mostrame title-->
+                                        <input type="text" class="form-control <%= locals.errors && ( errors.title && `is-invalid`) %>" value="<%= locals.old && (old.title && old.title) %>" name="title" id="title"
+                                            placeholder="Nombre del producto"><!-- Si es que en locals existe errors entonces validamos lo otro -->  
+                                            <small class="text-danger ms-2"><%= locals.errors && (errors.title && errors.title.msg) %></small>    
+                                    </div><!-- locals : Es un objeto que se encarga de almacenar informacion que envio del controlador a la vista-->
+
+                                                <!--    C A T E G O R Y   -->
+
                                     <div class="col-12 col-md-6 mb-3">
                                         <label for="category" class="form-label">Categoría</label>
-                                        <select class="form-select" id="category" name="category"
+                                        <select class="form-select <%= locals.errors && ( errors.category && `is-invalid`) %>" id="category" name="category"
                                             aria-label="Default select example">
                                             <option value="" selected>Seleccione categoría ...</option>
-                                            <% categories.forEach(category => { %>
-                                             <option value="<%= category.name %>"><%= category.name %></option>
+                                            <% categories.forEach(category => { %><!-- Si existe OLD en locals chekeame esto, si lo que se selecciona concide con name entonces seleccionamelo-->
+                                             <option value="<%= category.name %>" <%= locals.old && (locals.old.category === category.name && 'selected') %>><%= category.name %></option>
                                             <% }) %>
                                         </select>
+                                        <small class="text-danger ms-2"><%= locals.errors && (errors.category && errors.category.msg) %></small>
                                     </div>
+
+                                                <!--    P R I C E   -->
+
                                     <div class="col-12 col-md-4 mb-3">
                                         <label for="price" class="form-label">Precio</label>
-                                        <input type="number" class="form-control" name="price" id="price"
+                                        <input type="number" class="form-control <%= locals.errors && ( errors.price && `is-invalid`) %>" name="price" id="price" value="<%= locals.old && (old.price && old.price) %>"
                                             placeholder="Nombre del producto">
+                                           <small class="text-danger ms-2"><%= locals.errors && (errors.price && errors.price.msg) %></small>
                                     </div>
+
+                                                <!--    D I S C O U N T   -->
+
                                     <div class="col-12 col-md-4 mb-3">
                                         <label for="discount" class="form-label">Descuento</label>
-                                        <input type="number" class="form-control" name="discount" id="discount"
-                                            placeholder="Nombre del producto">
+                                        <input type="number" class="form-control" name="discount" id="discount">
                                     </div>
+
+                                                <!--    S E C T I  O N    -->
+
                                     <div class="col-12 col-md-4 mb-3">
                                         <label for="section" class="form-label">Seccion</label>
-                                        <select class="form-select" id="section" name="section"
-                                            aria-label="Default select example">
+                                        <select class="form-select <%= locals.errors && ( errors.section && `is-invalid`) %>" id="section" name="section">
                                             <option value="" selected hidden>Seleccione seccion ...</option>
-                                            <% sections.forEach(section => { %>
-                                             <option value="<%= section %>"><%= section  === 'free' ? 'Gratis' : section === 'sale' ? 'Oferta' : 'Nuevo' %></option>
+                                            <% sections.forEach(section => { %> <!-- Si existe old en locals y si section es estrictamente igual a section que lo muestre -->
+                                             <option value="<%= section %>" <%= locals.old && (locals.old.section === section && 'selected') %>><%= section  === 'free' ? 'Gratis' : section === 'sale' ? 'Oferta' : 'Nuevo' %></option>
                                             <% }) %>
                                         </select>
+                                        <small class="text-danger ms-2"><%= locals.errors && (errors.section && errors.section.msg) %></small>
                                     </div>
+
+                                                <!--    D E S C R I P T I O N    -->
+
                                     <div class="col-12 mb-3">
                                         <label for="description" class="form-label">Descripcion</label>
-                                        <textarea name="description" id="description" class="form-control"
-                                            style="resize: none;"></textarea>
+                                        <textarea name="description" id="description" class="form-control <%= locals.errors && ( errors.description&& `is-invalid`) %>"
+                                            style="resize: none;"><%= locals.old && (old.description && old.description) %></textarea>
+                                            <small class="text-danger ms-2"><%= locals.errors && (errors.description && errors.description.msg) %></small>
                                     </div>
+
+                                                <!--   B U T T O N S    -->
+
                                     <div class="col-12 d-flex justify-content-end gap-2 mb-3">
-                                        <label for="image" class="btn btn-secondary">Agregar imagen</label>
-                                        <input type="file" name="image" id="image" hidden>
+                                        <small class="text-danger ms-2">
+                                            <%= locals.errors && (errors.image && errors.image.msg) %>
+                                        </small>
+                                        <label for="image" class="btn <%= (locals.errors && errors.image) ? 'btn-danger' : 'btn-secondary' %>">Imagen principal</label>
+                                        <input type="file" name="image" id="image" hidden />
+                                        <!-- <label for="images" class="btn btn-secondary">Imágenes</label>
+                                        <input type="file" multiple name="images" id="images" hidden /> -->
                                         <button class="btn btn-dark">Guardar cambios</button>
                                     </div>
                                 </form>

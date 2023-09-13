@@ -12,11 +12,17 @@
                 </div>
                 <div class="card-body">
                     <form action="/products/update/<%= id %>?_method=PUT" method="POST" class="row">
+
+                                    <!--     T I T L E     -->
+
                         <div class="col-12 col-md-6 mb-3">
                             <label for="name" class="form-label">Titulo </label>
                             <input type="text" class="form-control" name="title" id="name"
                                 placeholder="Nombre del producto" value="<%= title %>">
                         </div>
+
+                                    <!--    C A T E G O R Y    -->
+                        
                         <div class="col-12 col-md-6 mb-3">
                             <label for="category" class="form-label">Categoría</label>
                             <select class="form-select" id="category" name="category"
@@ -26,16 +32,25 @@
                                 <% }) %>
                             </select>
                         </div>
+
+                                    <!--     P R I C E     -->
+
                         <div class="col-12 col-md-4 mb-3">
                             <label for="price" class="form-label">Precio</label>
                             <input type="number" class="form-control" name="price" id="price" value="<%= price %>"
                                 placeholder="Nombre del producto">
                         </div>
+
+                                    <!--     D I S C O U N  T     -->
+
                         <div class="col-12 col-md-4 mb-3">
                             <label for="discount" class="form-label">Descuento</label>
                             <input type="number" class="form-control" name="discount" id="discount"
                                 placeholder="Nombre del producto" value="<%= discount %>">
                         </div>
+
+                                    <!--     S E C T I O N     -->
+
                         <div class="col-12 col-md-4 mb-3">
                             <label for="section" class="form-label">Seccion</label>
                             <select class="form-select" id="section" name="section"
@@ -45,6 +60,9 @@
                                 <% }) %>
                             </select>
                         </div>
+
+                        <!--     D E S C R I P T I O N     -->
+
                         <div class="col-12 mb-3">
                             <label for="description" class="form-label">Descripcion</label>
                             <textarea name="description" id="description" class="form-control"

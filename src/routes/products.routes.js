@@ -1,5 +1,9 @@
 const express = require('express');
 const { detail, add, create, edit, update, remove } = require('../controllers/productsController');
+const productAddValidator = require('../validations/productAddValidator');
+const upload = require("../middlewares/upload");
+/* const productsEditValidator = require("../validations/productsEditValidator"); */
+/* const adminCheck = require("../middlewares/adminCheck"); */
 
 const router = express.Router();
 
@@ -8,7 +12,9 @@ const router = express.Router();
 router
     .get('/detail/:id', detail)
     .get('/add', add)
-    .post('/add', create)
+    .post('/add', upload.single('image'), productAddValidator, create)      // En la ruta siempre va primero MULTER y luego el VALIDADOR
+
+
     .get('/edit/:id', edit)
     .put('/update/:id', update)
     .delete('/remove/:id', remove)
